@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary: #CEED61;
+    --primary-dark: color-mix(in srgb, var(--primary) 75%, #000000);
+    --primary-light: color-mix(in srgb, var(--primary) 40%, #ec4899);
+    --primary-glow: color-mix(in srgb, var(--primary) 100%, transparent);
+    --primary-text-gradient: linear-gradient(to right, var(--primary), var(--primary-light), #ec4899);
+}
+
+:root {
+    --tw-color-accent: var(--primary);
+}
+
+* {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.tailwind-configured {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.logo-font {
+    font-family: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Hero background - uses primary color */
+.hero-bg {
+    background: radial-gradient(circle at 30% 20%, var(--primary-dark) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, var(--primary-light) 0%, transparent 50%);
+}
+
+.section-header {
+    position: relative;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    width: 64px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary), var(--primary-light));
+    bottom: -6px;
+    left: 0;
+    border-radius: 9999px;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--primary);
+}
+
+.nav-link:hover:after {
+    width: 100%;
+}
+
+.schedule-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.schedule-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 25px 25px 0 -10px var(--primary-glow);
+}
+
+.social-button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-button:hover {
+    transform: scale(1.08) rotate(3deg);
+    box-shadow: 0 0 25px -5px var(--primary-glow);
+}
+
+/* Schedule specific improvements */
+.schedule-time-slot {
+    background: rgba(255,255,255,0.06);
+}
+
+.schedule-day-header {
+    margin-bottom: 1.5rem;
+}
