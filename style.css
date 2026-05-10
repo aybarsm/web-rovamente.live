@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth
+}
+
 :root {
     --primary: #CEED61;
     --primary-dark: color-mix(in srgb, var(--primary) 75%, #000000);
