@@ -1,0 +1,39 @@
+<nav class="sticky top-0 z-50 bg-zinc-950/90 backdrop-blur-lg border-b border-white/10">
+    <div class="max-w-screen-2xl mx-auto">
+        <div class="px-8 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-9 h-9 rounded-2xl flex items-center justify-center shadow-inner">
+                    <span class="text-white text-2xl leading-none mt-px"><img src="profile.png"></span>
+                </div>
+                <h1 class="logo-font text- tracking-[-1px]">ROVAMENTE</h1>
+            </div>
+
+            <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                <a href="#links" class="nav-link text-zinc-300 hover:text-white title">Bağlantılar</a>
+                <a href="#schedule" class="nav-link text-zinc-300 hover:text-white">Takvim</a>
+                <a href="#about" class="nav-link text-zinc-300 hover:text-white">Hakkımda</a>
+                <a href="#equipment" class="nav-link text-zinc-300 hover:text-white">Ekipman</a>
+            </div>
+
+            <div class="flex items-center gap-x-4">
+                <button class="action-toggleMobileMenu md:hidden w-10 h-10 flex items-center justify-center text-2xl text-zinc-400 hover:text-white">
+                    <i id="mobileMenuButtonIcon" class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobileMenu" class="hidden md:hidden px-8 pb-6 border-t border-white/10">
+            <div class="flex flex-col gap-y-4 text-sm font-medium pt-4">
+                <a href="#links" class="py-3 px-4 hover:bg-white/5 rounded-2xl">Bağlantılar</a>
+                <a href="#schedule" class="py-3 px-4 hover:bg-white/5 rounded-2xl">Takvim</a>
+                <a href="#about" class="py-3 px-4 hover:bg-white/5 rounded-2xl">Hakkımda</a>
+                <a href="#equipment" class="py-3 px-4 hover:bg-white/5 rounded-2xl">Ekipman</a>
+                <a href="https://kick.com/rovamente" target="_blank"
+                    class="mt-2 flex items-center justify-center gap-x-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-4 rounded-3xl">
+                    <i class="fa-solid fa-play"></i>
+                    CANLI İZLE
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>

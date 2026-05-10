@@ -1,1 +1,95 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #CEED61;
+  --color-primary-dark: color-mix(in srgb, var(--color-primary) 75%, #000000);
+  --color-primary-light: color-mix(in srgb, var(--color-primary) 40%, #ec4899);
+  --color-accent: var(--color-primary);
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+}
+
+.hero-bg {
+  background: radial-gradient(circle at 30% 20%, var(--color-primary-dark) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, var(--color-primary-light) 0%, transparent 50%);
+}
+
+.section-header {
+  position: relative;
+}
+
+.section-header::after {
+  content: '';
+  position: absolute;
+  width: 64px;
+  height: 3px;
+  background: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  bottom: -6px;
+  left: 0;
+  border-radius: 9999px;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--color-primary);
+}
+
+.nav-link:hover:after {
+  width: 100%;
+}
+
+.schedule-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.schedule-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 25px 25px 0 -10px color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+
+.social-button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-button:hover {
+  transform: scale(1.08) rotate(3deg);
+  box-shadow: 0 0 25px -5px color-mix(in srgb, var(--color-primary) 40%, transparent);
+}
+
+.schedule-time-slot {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.schedule-day-header {
+  margin-bottom: 1.5rem;
+}
+
+.tailwind-configured {
+  font-family: var(--font-sans);
+}
+
+.logo-font {
+  font-family: var(--font-display);
+}
