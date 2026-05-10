@@ -11,11 +11,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="tailwind-configured bg-zinc-950 text-zinc-100">
-    <!-- NAVBAR -->
     <nav class="sticky top-0 z-50 bg-zinc-950/90 backdrop-blur-lg border-b border-white/10">
         <div class="max-w-screen-2xl mx-auto">
             <div class="px-8 py-5 flex items-center justify-between">
-                <!-- Logo -->
                 <div class="flex items-center gap-x-3">
                     <div class="w-9 h-9 rounded-2xl flex items-center justify-center shadow-inner">
                         <span class="text-white text-2xl leading-none mt-px"><img src="profile.png"></span>
@@ -23,7 +21,6 @@
                     <h1 class="logo-font text- tracking-[-1px]">ROVAMENTE</h1>
                 </div>
 
-                <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
                     <a href="#links" class="nav-link text-zinc-300 hover:text-white title">Bağlantılar</a>
                     <a href="#schedule" class="nav-link text-zinc-300 hover:text-white">Takvim</a>
@@ -55,7 +52,6 @@
         </div>
     </nav>
 
-    <!-- HERO -->
     <header class="hero-bg pt-20 pb-16 md:pt-28 md:pb-24">
         <div class="max-w-screen-2xl mx-auto px-8 grid md:grid-cols-12 gap-12 items-center">
             <!-- Left Content -->
@@ -67,34 +63,21 @@
                                  -webkit-background-clip: text;
                                  -webkit-text-fill-color: transparent;">ROVAMENTE</span>
                 </h1>
-                
-                <div class="flex flex-wrap items-center gap-4">
+
+                <div class="flex items-center gap-x-8">
                     <a href="https://kick.com/rovament" target="_blank"
-                       class="flex items-center justify-center gap-x-3 bg-white text-zinc-900 hover:bg-amber-300 font-semibold text-xl px-10 h-14 rounded-3xl">
+                    class="flex items-center justify-center gap-x-3 bg-white text-zinc-900 hover:bg-amber-300 font-semibold text-xl px-10 h-14 rounded-3xl flex-shrink-0">
                         <i class="fa-solid fa-play text-emerald-500"></i>
                         CANLI İZLE
                     </a>
-                    
-                    <div class="flex items-center text-sm font-medium gap-x-8 pl-4 border-l border-white/20">
-                        <div>
-                            <span class="block text-4xl font-semibold text-violet-400">2k</span>
-                            <span class="text-zinc-400">Takipçi</span>
-                        </div>
-                        <div>
-                            <span class="block text-4xl font-semibold text-violet-400">1.4m</span>
-                            <span class="text-zinc-400">Aylık İzlenme Saati</span>
-                        </div>
-                        <div>
-                            <span class="block text-4xl font-semibold text-violet-400">%98</span>
-                            <span class="text-zinc-400">İzleyici Kalıcılığı</span>
+                    <div class="h-14 flex items-center pl-6 border-l border-white/30">
+                        <div class="flex items-center gap-x-2 text-sm font-medium">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            <span class="text-zinc-400">Haftanın her günü yayın</span>
                         </div>
                     </div>
+
                 </div>
-                
-                <p class="text-zinc-400 mt-10 flex items-center gap-x-2">
-                    <i class="fa-solid fa-arrow-trend-up"></i>
-                    Haftanın her günü yayın
-                </p>
             </div>
             
             <!-- Right Visual -->
@@ -122,6 +105,28 @@
             </div>
         </div>
     </header>
+
+    <section id="stats">
+        <div class="bg-white py-24 sm:py-32 dark:bg-gray-900">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                    <dt class="text-base/7 text-gray-600 dark:text-gray-400">Takipçi</dt>
+                    <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl dark:text-white">2k</dd>
+                </div>
+                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                    <dt class="text-base/7 text-gray-600 dark:text-gray-400">Aylık Toplam İzlenme Saati</dt>
+                    <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl dark:text-white">1.4m</dd>
+                </div>
+                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                    <dt class="text-base/7 text-gray-600 dark:text-gray-400">İzleyici Kalıcılık Oranı</dt>
+                    <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl dark:text-white">%98</dd>
+                </div>
+                </dl>
+            </div>
+        </div>
+    </section>
+
 
     <!-- LINKS SECTION -->
     <section id="links" class="max-w-screen-2xl mx-auto px-8 py-20 border-t border-white/10">
@@ -434,10 +439,76 @@
                 <h2 class="section-header text-5xl font-semibold logo-font tracking-tight">Ekipman</h2>
             </div>
         </div>
-    
+
+        <div class="md:col-span-7 bg-white/5 border border-white/10 rounded-3xl p-10 md:p-12">
+            <div class="grid grid-cols-2 gap-8">
+                <div class="flex flex-col border-r border-white/10 pr-8">
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-x-4">
+                            <div class="font-mono text-violet-400 w-6">İşlemci</div>
+                            <div class="flex-1">
+                                <div class="font-medium">Intel Core i5-13600KF</div>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-x-4">
+                            <div class="font-mono text-violet-400 w-6">MON</div>
+                            <div class="flex-1">
+                                <div class="font-medium">Samsung Odyssey OLED G8 • 4K 240Hz</div>
+                                <div class="text-zinc-400 text-sm">32-inch ultrawide curved</div>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-x-4">
+                            <div class="font-mono text-violet-400 w-6">M/K</div>
+                            <div class="flex-1">
+                                <div class="font-medium">Wooting 80HE keyboard + Finalmouse Starlight</div>
+                                <div class="text-zinc-400 text-sm">Hall-effect + 4K polling</div>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-x-4">
+                            <div class="font-mono text-violet-400 w-6">HS</div>
+                            <div class="flex-1">
+                                <div class="font-medium">Audeze Maxwell Wireless</div>
+                                <div class="text-zinc-400 text-sm">Planar magnetic gaming headset</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-x-4">
+                            <div class="font-mono text-fuchsia-400 w-6">MIC</div>
+                            <div class="flex-1">
+                                <div class="font-medium">Shure SM7B + Cloudlifter + FetHead</div>
+                                <div class="text-zinc-400 text-sm">Warm, professional broadcast voice</div>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-x-4">
+                            <div class="font-mono text-fuchsia-400 w-6">CAM</div>
+                            <div class="flex-1">
+                                <div class="font-medium">Sony A7 IV + Elgato Cam Link 4K</div>
+                                <div class="text-zinc-400 text-sm">4K60 with Sigma 24-70mm lens</div>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-x-4">
+                            <div class="font-mono text-fuchsia-400 w-6">LIGHT</div>
+                            <div class="flex-1">
+                                <div class="font-medium">2× Elgato Key Light Air + Nanlite RGB tube</div>
+                                <div class="text-zinc-400 text-sm">Perfect key + fill + accent lighting</div>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-x-4">
+                            <div class="font-mono text-fuchsia-400 w-6">STREAM</div>
+                            <div class="flex-1">
+                                <div class="font-medium">Elgato Stream Deck MK.2 + 4K60 Pro</div>
+                                <div class="text-zinc-400 text-sm">Instant scene switching &amp; macros</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- FOOTER / FINAL CTA -->
     <footer class="bg-black py-12 border-t border-white/10">
         <div class="max-w-screen-2xl mx-auto px-8 text-center">
             <div class="flex justify-center mb-6">
