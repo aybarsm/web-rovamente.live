@@ -2,15 +2,23 @@
 import { defineConfig, fontProviders } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
-const siteConfig = {
+export const siteConfig = {
+  defaults: {
+    layout: {
+      headTitle: 'Rovamente',
+      htmlLang: 'tr',
+      htmlClass: '',
+      bodyClass: '',
+    },
+  },
   redirects: {
     'kick': 'https://kick.com/rovamente',
     'discord': 'https://discord.gg/guRe56y69t',
     'instagram': 'https://instagram.com/rovamente',
     'tiktok': 'https://tiktok.com/@rovamente',
     'bynogame': 'https://donate.bynogame.com/rovamente',
-  }
-}
+  },
+};
 
 // https://astro.build/config
 export default defineConfig({
@@ -53,5 +61,8 @@ export default defineConfig({
       subsets: ['latin-ext'],
       fallbacks: ['sans-serif']
     }
-  ]
+  ],
+  devToolbar: {
+    enabled: false,
+  }
 });
