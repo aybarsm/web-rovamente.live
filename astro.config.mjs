@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig, fontProviders } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
+import { InjectCssVars } from './src/plugins/InjectCssVars.ts';
 
 export const siteConfig = {
   defaults: {
@@ -40,6 +41,9 @@ export default defineConfig({
   vite: {
     plugins: [
       tailwindcss(),
+      InjectCssVars({
+        'color-theme': '#CEED61',
+      })
     ]
   },
   fonts: [
