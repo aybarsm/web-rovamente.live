@@ -12,6 +12,20 @@ function initializeTailwind() {
     }
 }
 
+function isMobileMenuHidden(config) {
+    return config.elements.mobileMenu.classList.contains('hidden');
+}
+
+function toggleMobileMenu(config) {
+    if (isMobileMenuHidden(config)){
+            config.elements.mobileMenu.classList.remove('hidden');
+            config.elements.mobileMenuButtonIcon.classList.replace('fa-bars', 'fa-xmark');
+        }else {
+            config.elements.mobileMenu.classList.add('hidden');
+            config.elements.mobileMenuButtonIcon.classList.replace('fa-xmark', 'fa-bars');
+        }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const config = initializeTailwind().config({
         'elements': {
@@ -20,25 +34,21 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-    const isMobileMenuHidden = () => config.elements.mobileMenu.classList.contains('hidden');
-    const toggleMobileMenu = function() {
-        if (isMobileMenuHidden()){
-            config.elements.mobileMenu.classList.remove('hidden');
-            config.elements.mobileMenuButtonIcon.classList.replace('fa-bars', 'fa-xmark');
-        }else {
-            config.elements.mobileMenu.classList.add('hidden');
-            config.elements.mobileMenuButtonIcon.classList.replace('fa-xmark', 'fa-bars');
-        }
-    };
+    document.querySelectorAll('.action-toggleMobileMenu').forEach(element => {
+        element.addEventListener('click', function (event) {
+            event.preventDefault();
+            toggleMobileMenu(config);
+        });
+    });;
 
-    window.toggleMobileMenu = toggleMobileMenu;
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+    document.querySelectorAll('a[href^="#"]').forEach(element => {
+        element.addEventListener('click', function (event) {
             if (this.getAttribute('href') === '#') return;
+            
             const target = document.querySelector(this.getAttribute('href'));
+
             if (target) {
-                e.preventDefault();
+                event.preventDefault();
                 const navHeight = 80;
                 const topOffset = target.getBoundingClientRect().top + window.scrollY - navHeight;
                 window.scrollTo({ top: topOffset, behavior: 'smooth' });

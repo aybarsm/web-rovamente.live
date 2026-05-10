@@ -29,8 +29,7 @@
                 </div>
 
                 <div class="flex items-center gap-x-4">
-                    <button onclick="toggleMobileMenu()" 
-                            class="md:hidden w-10 h-10 flex items-center justify-center text-2xl text-zinc-400 hover:text-white">
+                    <button class="action-toggleMobileMenu md:hidden w-10 h-10 flex items-center justify-center text-2xl text-zinc-400 hover:text-white">
                         <i id="mobileMenuButtonIcon" class="fa-solid fa-bars"></i>
                     </button>
                 </div>
@@ -38,10 +37,10 @@
             
             <div id="mobileMenu" class="hidden md:hidden px-8 pb-6 border-t border-white/10">
                 <div class="flex flex-col gap-y-4 text-sm font-medium pt-4">
-                    <a href="#links" onclick="toggleMobileMenu()" class="py-3 px-4 hover:bg-white/5 rounded-2xl">Bağlantılar</a>
-                    <a href="#schedule" onclick="toggleMobileMenu()" class="py-3 px-4 hover:bg-white/5 rounded-2xl">Takvim</a>
-                    <a href="#about" onclick="toggleMobileMenu()" class="py-3 px-4 hover:bg-white/5 rounded-2xl">Hakkımda</a>
-                    <a href="#equipment" onclick="toggleMobileMenu()" class="py-3 px-4 hover:bg-white/5 rounded-2xl">Ekipman</a>
+                    <a href="#links" class="action-toggleMobileMenu py-3 px-4 hover:bg-white/5 rounded-2xl">Bağlantılar</a>
+                    <a href="#schedule" class="py-3 px-4 hover:bg-white/5 rounded-2xl">Takvim</a>
+                    <a href="#about" class="py-3 px-4 hover:bg-white/5 rounded-2xl">Hakkımda</a>
+                    <a href="#equipment" class="py-3 px-4 hover:bg-white/5 rounded-2xl">Ekipman</a>
                     <a href="https://kick.com/rovamente" target="_blank"
                        class="mt-2 flex items-center justify-center gap-x-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-4 rounded-3xl">
                         <i class="fa-solid fa-play"></i>
@@ -54,14 +53,12 @@
 
     <header class="hero-bg pt-20 pb-16 md:pt-28 md:pb-24">
         <div class="max-w-screen-2xl mx-auto px-8 grid md:grid-cols-12 gap-12 items-center">
-            <!-- Left Content -->
             <div class="md:col-span-7">
-                <h1 class="text-7xl md:text-8xl font-semibold logo-font tracking-[-3px] leading-none mb-4">
+                <h1 class="text-8xl max-md:text-6xl font-semibold logo-font tracking-[-3px] leading-none mb-4">
                     Merhaba!<br>Ben, Ozan<br>
-                    <span class="bg-clip-text text-transparent"
-                          style="background: var(--primary-text-gradient);
-                                 -webkit-background-clip: text;
-                                 -webkit-text-fill-color: transparent;">ROVAMENTE</span>
+                    <span class="bg-clip-text text-transparent" style="background: var(--primary-text-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                        ROVAMENTE
+                    </span>
                 </h1>
 
                 <div class="flex items-center gap-x-8">
@@ -70,7 +67,7 @@
                         <i class="fa-solid fa-play text-emerald-500"></i>
                         CANLI İZLE
                     </a>
-                    <div class="h-14 flex items-center pl-6 border-l border-white/30">
+                    <div class="max-sm:hidden h-14 flex items-center pl-6 border-l border-white/30">
                         <div class="flex items-center gap-x-2 text-sm font-medium">
                             <i class="fa-solid fa-arrow-trend-up"></i>
                             <span class="text-zinc-400">Haftanın her günü yayın</span>
@@ -80,14 +77,11 @@
                 </div>
             </div>
             
-            <!-- Right Visual -->
             <div class="md:col-span-5 flex justify-center">
                 <div class="relative">
-                    <!-- Avatar -->
                     <div class="w-72 h-72 md:w-80 md:h-80 rounded-[4rem] flex items-center justify-center shadow-2xl relative"
                          style="background: linear-gradient(to bottom right, var(--primary-dark), var(--primary)); box-shadow: 0 25px 50px -12px var(--primary-glow);">
                         <div class="w-[260px] h-[260px] md:w-[290px] md:h-[290px] bg-zinc-900 rounded-[3rem] flex items-center justify-center overflow-hidden">
-                            <!-- Placeholder profile visual -->
                             <div class="text-center">
                                 <div class="w-28 h-28 mx-auto rounded-3xl flex items-center justify-center text-7xl mb-6 shadow-inner">
                                     <img src="profile.png">
@@ -127,8 +121,6 @@
         </div>
     </section>
 
-
-    <!-- LINKS SECTION -->
     <section id="links" class="max-w-screen-2xl mx-auto px-8 py-20 border-t border-white/10">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
             <div>
@@ -138,7 +130,6 @@
         </div>
         
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-            <!-- Kick -->
             <a href="https://kick.com/rovamente" target="_blank"
                class="social-button group bg-zinc-900 hover:bg-white hover:text-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col items-center text-center">
                 <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-6"
@@ -150,7 +141,6 @@
                 <span class="text-xs uppercase tracking-widest mt-auto pt-6 text-emerald-400">HER GÜN YAYIN</span>
             </a>
             
-            <!-- Instagram -->
             <a href="https://instagram.com/rovamente" target="_blank"
                class="social-button group bg-zinc-900 hover:bg-white hover:text-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col items-center text-center">
                 <div class="w-14 h-14 bg-gradient-to-br from-[#e1306c] to-[#f56040] text-white rounded-2xl flex items-center justify-center text-3xl mb-6">
@@ -160,8 +150,7 @@
                 <p class="text-zinc-400 text-sm mt-1">@rovamente</p>
                 <span class="text-xs uppercase tracking-widest mt-auto pt-6">SAHNE ARKASI</span>
             </a>
-            
-            <!-- Discord -->
+
             <a href="https://discord.gg/sBJDv8HC7A" target="_blank"
                class="social-button group bg-zinc-900 hover:bg-white hover:text-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col items-center text-center">
                 <div class="w-14 h-14 bg-[#5865f2] text-white rounded-2xl flex items-center justify-center text-3xl mb-6">
@@ -171,8 +160,7 @@
                 <p class="text-zinc-400 text-sm mt-1">rovamente</p>
                 <span class="text-xs uppercase tracking-widest mt-auto pt-6 text-violet-400">142 ÜYE</span>
             </a>
-            
-            <!-- TikTok -->
+
             <a href="https://tiktok.com/@rovamente" target="_blank"
                class="social-button group bg-zinc-900 hover:bg-white hover:text-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col items-center text-center">
                 <div class="w-14 h-14 bg-black text-white rounded-2xl flex items-center justify-center text-3xl mb-6">
@@ -182,8 +170,7 @@
                 <p class="text-zinc-400 text-sm mt-1">@rovamente</p>
                 <span class="text-xs uppercase tracking-widest mt-auto pt-6">EĞLENCELİ ANLAR</span>
             </a>
-            
-            <!-- Donation -->
+
             <a href="https://donate.bynogame.com/rovamente" target="_blank"
                class="social-button group bg-gradient-to-br from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-zinc-900 border border-transparent rounded-3xl p-8 flex flex-col items-center text-center">
                 <div class="w-14 h-14 bg-white/20 text-amber-900 rounded-2xl flex items-center justify-center text-3xl mb-6">
@@ -196,7 +183,6 @@
         </div>
     </section>
 
-    <!-- FIXED SCHEDULE SECTION - Badges now on new line -->
     <section id="schedule" class="max-w-screen-2xl mx-auto px-8 py-20 bg-zinc-950 border-y border-white/10">
         <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12">
             <div>
@@ -209,7 +195,6 @@
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-6">
-            <!-- Monday -->
             <div class="schedule-card bg-zinc-900 border border-white/10 rounded-3xl p-6 flex flex-col">
                 <div class="schedule-day-header">
                     <div class="text-3xl font-semibold">Pazartesi</div>
@@ -235,7 +220,6 @@
                 </div>
             </div>
 
-            <!-- Tuesday -->
             <div class="schedule-card bg-zinc-900 border border-white/10 rounded-3xl p-6 flex flex-col">
                 <div class="schedule-day-header">
                     <div class="text-3xl font-semibold">Salı</div>
@@ -257,7 +241,6 @@
                 </div>
             </div>
 
-            <!-- Wednesday -->
             <div class="schedule-card bg-zinc-900 border border-white/10 rounded-3xl p-6 flex flex-col">
                 <div class="schedule-day-header">
                     <div class="text-3xl font-semibold">Çarşamba</div>
@@ -279,7 +262,6 @@
                 </div>
             </div>
 
-            <!-- Thursday -->
             <div class="schedule-card bg-zinc-900 border border-white/10 rounded-3xl p-6 flex flex-col">
                 <div class="schedule-day-header">
                     <div class="text-3xl font-semibold">Perşembe</div>
@@ -305,7 +287,6 @@
                 </div>
             </div>
 
-            <!-- Friday -->
             <div class="schedule-card bg-zinc-900 border border-white/10 rounded-3xl p-6 flex flex-col">
                 <div class="schedule-day-header">
                     <div class="text-3xl font-semibold">Cuma</div>
@@ -331,7 +312,6 @@
                 </div>
             </div>
 
-            <!-- Saturday -->
             <div class="schedule-card bg-zinc-900 border border-white/10 rounded-3xl p-6 flex flex-col">
                 <div class="schedule-day-header">
                     <div class="text-3xl font-semibold">Cumartesi</div>
@@ -373,7 +353,6 @@
                 </div>
             </div>
 
-            <!-- Sunday -->
             <div class="schedule-card bg-zinc-900 border border-white/10 rounded-3xl p-6 flex flex-col">
                 <div class="schedule-day-header">
                     <div class="text-3xl font-semibold">Pazar</div>
@@ -401,7 +380,6 @@
         </div>
     </section>
 
-    <!-- ABOUT ME SECTION -->
     <section id="about" class="max-w-screen-2xl mx-auto px-8 py-20">
         <div class="grid md:grid-cols-12 gap-16 items-center">
             <div class="md:col-span-5">
@@ -413,7 +391,6 @@
                 </div>
             </div>
             
-            <!-- Stats / Visual -->
             <div class="md:col-span-7 bg-white/5 border border-white/10 rounded-3xl p-10 md:p-12">
                 <div class="grid grid-cols-2 gap-8">
                     <div class="flex flex-col justify-center border-r border-white/10 pr-8">
